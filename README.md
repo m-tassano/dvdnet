@@ -11,9 +11,9 @@ Two different testsets were used for benchmarking our method: the DAVIS-test tes
 | Noise std dev | DVDNet | VNLB | V-BM4D | NeatVideo |
 |---|---|---|---|---|
 | 10 | 36.08 | **37.26** | 36.05 | 35.67 | 
-| 20 | 33.49 | **33.72** | 32.19 | - | 
+| 20 | 33.49 | **33.72** | 32.19 | 31.69 | 
 | 30 | **31.79** | 31.74 | 30.00 | 28.84 | 
-| 40 | **30.55** | 30.39 | 28.48 | - | 
+| 40 | **30.55** | 30.39 | 28.48 | 26.36 | 
 | 50 | **29.56** | 29.24 | 27.33 | 25.46 | 
 
 ### PSNRs DAVIS testset
