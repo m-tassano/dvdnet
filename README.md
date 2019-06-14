@@ -1,4 +1,4 @@
-# DVDnet
+# [DVDnet](https://hal.archives-ouvertes.fr/hal-02147604)
 A state-of-the-art, simple and fast network for Deep Video Denoising
 
 ## Video examples
