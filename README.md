@@ -1,9 +1,12 @@
 # [DVDnet](https://hal.archives-ouvertes.fr/hal-02147604)
 A state-of-the-art, simple and fast network for Deep Video Denoising
 
+**NEW: a state-of-the-art algorithm for video denoising without motion compensation [FastDVDnet](https://github.com/m-tassano/fastdvdnet)**
+
 ## Overview
 
-This source code provides a PyTorch implementation of DVDnet image denoising, as in Tassano, Matias and Delon, Julie and Veit, Thomas. "DVDnet: A Fast Network for Deep Video Denoising", IEEE ICIP 2019, arXiv preprint arXiv:1906.11890 (2019).
+This source code provides a PyTorch implementation of DVDnet image denoising, as in 
+Tassano, Matias and Delon, Julie and Veit, Thomas. "DVDnet: A Fast Network for Deep Video Denoising", IEEE ICIP 2019, arXiv preprint arXiv:1906.11890 (2019).
 
 ## Video examples
  You can download several denoised sequences with our algorithm and other methods [here](https://www.dropbox.com/sh/gccey7wuxiqr104/AAC_v6kb3fMYxMHBc6wcqu17a?dl=0 "DVDnet denoised sequences")
@@ -25,7 +28,7 @@ found under the *models* folder you can execute
 ```
 python test_dvdnet.py \
         --test_path <path_to_input_sequence> \
-		--save_path results \
+	--save_path results \
         --noise_sigma 25 \
 ```
 
@@ -67,7 +70,7 @@ are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved. This file is offered as-is,
 without any warranty.
 
-* Author    : Matias Tassano <matias.tassano@parisdescartes.fr>
+* Author    : Matias Tassano `matias dot tassano at parisdescartes dot fr`
 * Copyright : (C) 2019 Matias Tassano
 * Licence   : GPL v3+, see GPLv3.txt
 
