@@ -141,10 +141,10 @@ if __name__ == "__main__":
 	# Parse arguments
 	parser = argparse.ArgumentParser(description="Denoise a sequence with DVDnet")
 	parser.add_argument("--model_spatial_file", type=str,\
-						default="models/model_spatial.pth", \
+						default="model_spatial.pth", \
 						help='path to model of the pretrained spatial denoiser')
 	parser.add_argument("--model_temp_file", type=str,\
-						default="models/model_temp.pth", \
+						default="model_temp.pth", \
 						help='path to model of the pretrained temporal denoiser')
 	parser.add_argument("--test_path", type=str, default="./data/rgb/Kodak24", \
 						help='path to sequence to denoise')
