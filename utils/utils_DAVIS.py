@@ -19,7 +19,8 @@ from random import choices # requires Python >= 3.6
 import numpy as np
 import cv2
 import torch
-from skimage.measure.simple_metrics import compare_psnr
+# from skimage.measure.simple_metrics import compare_psnr
+from skimage.metrics import peak_signal_noise_ratio as compare_psnr
 
 IMAGETYPES = ('*.bmp', '*.png', '*.jpg', '*.jpeg', '*.tif') # Supported image types
 

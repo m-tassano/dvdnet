@@ -6,7 +6,7 @@ DVDnet denoising algorithm
 import numpy as np
 import torch
 import torch.nn.functional as F
-from utils import variable_to_cv2_image, normalize
+from utils.utils_DAVIS import variable_to_cv2_image, normalize
 from motioncompensation import align_frames
 
 def temporal_denoise(model, noisyframe, sigma_noise):
@@ -42,7 +42,8 @@ def spatial_denoise(model, noisyframe, noise_map):
 	noise_map = F.pad(input=noise_map, pad=padexp, mode='reflect')
 
 	# denoise
-	out = torch.clamp(model(noisyframe, noise_map), 0., 1.)
+	# out = torch.clamp(model(noisyframe, noise_map), 0., 1.)
+	out = torch.clamp(noisyframe, 0., 1.)
 
 	if expanded_h:
 		out = out[:, :, :-1, :]

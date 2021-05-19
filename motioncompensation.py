@@ -1,7 +1,8 @@
 """
 Functions to estimate the flow between two images and compensate it.
 
-@author: Matias Tassano <mtassano@parisdescartes.fr>
+DeepFlow seems to be much better than SimpleFlow in terms of warping quality,
+and much faster than TVL1 in terms of speed
 """
 import numpy as np
 import cv2
@@ -74,3 +75,22 @@ def align_frames(img_to_align, img_source, mc_alg='DeepFlow'):
 	out_img = warp_flow(img_to_align, flow)
 
 	return out_img
+
+if __name__=="__main__":
+	import glob
+	import imageio 
+
+	dir2imgs = "/home/abel/Desktop/repo_history/k_dvdnet/data/DAVIS/JPEGImages/480p/car-race"
+	list2imgs = sorted(glob.glob(dir2imgs+"/*jpg"))
+
+	print("Total image number=", len(list2imgs))
+	img0 = imageio.imread(list2imgs[0])/255.0
+	img1 = imageio.imread(list2imgs[3])/255.0
+	# flow = estimate_invflow(img0, img1, me_algo="SimpleFlow")
+	warped_img0 = align_frames(img0, img1, mc_alg='DeepFlow')/255.0
+	# print(np.max(warped_img0))
+	diff_before_align = np.abs(img0-img1)
+	diff_after_align = np.abs(warped_img0-img1)
+	imageio.imwrite("img0_img1.jpg", np.hstack((img0, img1)))
+	imageio.imwrite("img0_warpedImg0.jpg", np.hstack((img0, warped_img0)))
+	imageio.imwrite("diff_beforeAfterAlign.jpg", np.hstack((diff_before_align, diff_after_align)))

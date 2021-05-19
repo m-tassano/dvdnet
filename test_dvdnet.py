@@ -12,8 +12,8 @@ import cv2
 import torch
 import torch.nn as nn
 from models import DVDnet_spatial, DVDnet_temporal
-from dvdnet import denoise_seq_dvdnet
-from utils import batch_psnr, init_logger_test, variable_to_cv2_image, \
+from dvdnet import denoise_seq_dvdnet 
+from utils.utils_DAVIS import batch_psnr, init_logger_test, variable_to_cv2_image, \
 				remove_dataparallel_wrapper, open_sequence, close_logger
 
 NUM_IN_FRAMES = 5 # temporal size of patch
@@ -106,7 +106,7 @@ def test_dvdnet(**args):
 		seqload_time = time.time()
 
 		# Add noise
-		noise = torch.empty_like(seq).normal_(mean=0, std=args['noise_sigma']).to(device)
+		noise = torch.empty_like(seq).normal_(mean=0, std=args['noise_sigma']).to(device) # torch.Tensor.normal_() - in-place version of torch.normal()
 		seqn = seq + noise
 		noisestd = torch.FloatTensor([args['noise_sigma']]).to(device)
 
@@ -138,28 +138,32 @@ def test_dvdnet(**args):
 	close_logger(logger)
 
 if __name__ == "__main__":
+	import time 
+
 	# Parse arguments
 	parser = argparse.ArgumentParser(description="Denoise a sequence with DVDnet")
 	parser.add_argument("--model_spatial_file", type=str,\
-						default="model_spatial.pth", \
+						default="checkpoints/model_spatial.pth", \
 						help='path to model of the pretrained spatial denoiser')
 	parser.add_argument("--model_temp_file", type=str,\
-						default="model_temp.pth", \
+						default="checkpoints/model_temp.pth", \
 						help='path to model of the pretrained temporal denoiser')
-	parser.add_argument("--test_path", type=str, default="./data/rgb/Kodak24", \
+	# parser.add_argument("--test_path", type=str, default="./data/DAVIS/JPEGImages/480p/car-race", \
+	# 					help='path to sequence to denoise')
+	parser.add_argument("--test_path", type=str, default="/home/abel/Desktop/repo_history/k_dvdnet/data/DAVIS_noisy_eval5", \
 						help='path to sequence to denoise')
 	parser.add_argument("--suffix", type=str, default="", help='suffix to add to output name')
-	parser.add_argument("--max_num_fr_per_seq", type=int, default=1000, \
+	parser.add_argument("--max_num_fr_per_seq", type=int, default=100, \
 						help='max number of frames to load per sequence')
 	parser.add_argument("--noise_sigma", type=float, default=25, help='noise level used on test set')
 	parser.add_argument("--dont_save_results", action='store_true', help="don't save output images")
-	parser.add_argument("--save_noisy", action='store_true', help="save noisy images as well")
+	parser.add_argument("--save_noisy", action='store_true', default=True, help="save noisy images as well")
 	parser.add_argument("--no_gpu", action='store_true', help="run model on CPU")
 	parser.add_argument("--save_path", type=str, default='./results', \
 						 help='where to save outputs as png')
 
 	argspar = parser.parse_args()
-	# Normalize noises ot [0, 1]
+	# Normalize noises to [0, 1]
 	argspar.noise_sigma /= 255.
 
 	# use CUDA?
@@ -171,4 +175,7 @@ if __name__ == "__main__":
 		print('\t{}: {}'.format(p, v))
 	print('\n')
 
+	start_time = time.time()
 	test_dvdnet(**vars(argspar))
+	elapsed_time = time.time() - start_time
+	print("elapsed_time=", elapsed_time)

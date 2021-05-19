@@ -1,3 +1,31 @@
+Abel TODO:
+1) solve the training error
+2) train on server with larger dataset (lambda?)
+3) improve code with pytorch template
+
+
+
+Done) Add optical flow to training
+
+
+Questions:
+1) batch normalization ON/OFF differences?
+2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # [DVDnet](https://hal.archives-ouvertes.fr/hal-02147604)
 A state-of-the-art, simple and fast network for Deep Video Denoising
 
