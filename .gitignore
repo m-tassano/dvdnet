@@ -3,7 +3,7 @@ data/
 *.pth
 *.jpg
 *.png
-
+results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

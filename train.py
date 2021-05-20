@@ -28,7 +28,7 @@ if __name__ == "__main__":
         'learning_rate' : 1e-4,
         'batch_size' : 1,
         'log_step' : 20,
-        'checkpoint_step' : 2000,
+        'checkpoint_step' : 200,
         'valid_step' : 20
     }
     main(config)

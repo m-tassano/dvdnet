@@ -4,7 +4,7 @@ import torch.nn as nn
 from abc import abstractmethod
 from utils import inf_loop
 from torch.utils.tensorboard import SummaryWriter
-from logger import TensorboardWriter
+# from logger import TensorboardWriter
 import os
 import datetime
 from models import DVDnet_temporal
