@@ -1,3 +1,14 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-davis-sigma30)](https://paperswithcode.com/sota/video-denoising-on-davis-sigma30?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-davis-sigma40)](https://paperswithcode.com/sota/video-denoising-on-davis-sigma40?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-davis-sigma50)](https://paperswithcode.com/sota/video-denoising-on-davis-sigma50?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-set8-sigma20)](https://paperswithcode.com/sota/video-denoising-on-set8-sigma20?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-set8-sigma30)](https://paperswithcode.com/sota/video-denoising-on-set8-sigma30?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-set8-sigma40)](https://paperswithcode.com/sota/video-denoising-on-set8-sigma40?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-set8-sigma50)](https://paperswithcode.com/sota/video-denoising-on-set8-sigma50?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-davis-sigma10)](https://paperswithcode.com/sota/video-denoising-on-davis-sigma10?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-davis-sigma20)](https://paperswithcode.com/sota/video-denoising-on-davis-sigma20?p=dvdnet-a-fast-network-for-deep-video)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dvdnet-a-fast-network-for-deep-video/video-denoising-on-set8-sigma10)](https://paperswithcode.com/sota/video-denoising-on-set8-sigma10?p=dvdnet-a-fast-network-for-deep-video)
+
 # [DVDnet](https://hal.archives-ouvertes.fr/hal-02147604)
 A state-of-the-art, simple and fast network for Deep Video Denoising
 
