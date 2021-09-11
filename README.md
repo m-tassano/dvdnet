@@ -81,7 +81,7 @@ are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved. This file is offered as-is,
 without any warranty.
 
-* Author    : Matias Tassano `matias dot tassano at parisdescartes dot fr`
+* Author    : Matias Tassano `mtassano at gopro dot com`
 * Copyright : (C) 2019 Matias Tassano
 * Licence   : GPL v3+, see GPLv3.txt
 
